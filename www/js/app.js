@@ -1,3 +1,4 @@
+
 angular.module('calorific', ['ionic'])
 
 .run(function($ionicPlatform) {
@@ -12,3 +13,4 @@ angular.module('calorific', ['ionic'])
     }
   });
 })
+
