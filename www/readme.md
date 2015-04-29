@@ -1,4 +1,10 @@
 Tim Daiber G00260494
+This project can also be found on github 
+https://github.com/Timber90/ionic-assignment/tree/tim
+There is a branch called tim forked from the original
+(https://github.com/Timber90/ionic-assignment/tree/master)
+I have made 9 commits in the process of developing the app.
+
 Readme
 Calory counter
 How it works:
