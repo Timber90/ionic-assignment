@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+  <head><!-- Declares start of head -->
+    <meta charset="utf-8"><!-- Sets characterset to UTF-* -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"><!-- -->
+    <title></title><!--Not set -->
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-    <script src="cordova.js"></script>
-    <script type="text/javascript">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet"><!--Calls on stylesheet for css and set reference path-->
+    <script src="lib/ionic/js/ionic.bundle.js"></script><!--Sets script source to  path "" -->
+    <script src="cordova.js"></script><!--Calls upon cordova.js script -->
+     <!-- sets type to javascript,calls angualr.module,calls controller function scope,sets scope.count to 0 -->
+	<script type="text/javascript"> 
       angular.module('counter', ['ionic'])
 
       .controller("CountCtrl", function($scope) {
         $scope.count = 0;
       });
-    </script>
+    </script><!-- ends  script -->
 
-  </head>
-  <body ng-app="counter" ng-controller="CountCtrl">
+  </head><!-- ends head -->
+  <body ng-app="counter" ng-controller="CountCtrl"><!-- opens body calls ng-app,calls ng-contoller -->
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Calorie Counter</h1>
-     </ion-header-bar>
-      <ion-content>
-        <div class="list list-inset">
-          <label class="item item-input">
-            <input type="number" ng-model="count" />
-          </label>
+    <ion-pane><!--Opens ionic pane  -->
+      <ion-header-bar class="bar-stable"><!-- declares header bar and style  -->
+        <h1 class="title">Calorie Counter</h1><!--Opens and declares header -->
+     </ion-header-bar><!-- closes header bar -->
+      <ion-content><!-- opens ionic content -->
+        <div class="list list-inset"><!--starts divider declared as class list -->
+          <label class="item item-input"><!--opens label class item -->
+            <input type="number" ng-model="count" /><!-- Sets input method to ng-moder type numbers -->
+          </label><!--closes label -->
  
-        <ul class="list">
-    <li class="item">
-  <h1 class="title">Enter Calories<br> Manually</h1>
- <div class="list ">
+        <ul class="list"><!-- -->
+    <li class="item"><!--Starts list type item -->
+  <h1 class="title">Enter Calories<br> Manually</h1><!--sets header with title -->
+ <div class="list "><!--opens divider -->
 
-         <button class="button  button-positive" ng-click="count = count + 1">
-        Count  +1
-          </button>
-       
+         <button class="button  button-positive" ng-click="count = count + 1"><!-- creates button with class type and sets button click -->
+        Count  +1<!-- Sets what is displayed on the button -->
+          </button><!--closes button parameters -->
+       <!--Same for all the buttons below  -->
 
           <button class="button button-positive" ng-click="count =count +5 ">
             5+
@@ -186,7 +187,7 @@
      </ul>
 </div>
  <label class="item item-input">
-            <input type="number" ng-model="count" />
+            <input type="number" ng-model="count" /><!--Displays current count value  --> 
           </label>
         
 
@@ -194,7 +195,7 @@
            Undo
           </button>
 
-  <button class="button button-block button-assertive" ng-click="count =0 ">
+  <button class="button button-block button-assertive" ng-click="count =0 "><!--Resets count in labels -->
             Reset
           </button>
 	 </div>
