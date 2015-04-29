@@ -12,13 +12,18 @@
 	<script type="text/javascript"> 
       angular.module('counter', ['ionic'])
 
-      .controller("CountCtrl", function($scope) {
-        $scope.count = 0;
+      .controller("Count2Ctrl", function($scope) {
+        $scope.count2 = 0;
+      })
+
+ .controller("CountCtrl", function($scope) {
+        $scope.count2 = 0;
       });
+
     </script><!-- ends  script -->
 
   </head><!-- ends head -->
-  <body ng-app="counter" ng-controller="CountCtrl"><!-- opens body calls ng-app,calls ng-contoller -->
+  <body ng-app="counter" ng-controller="CountCtrl" ng-controller="Count2Ctrl"><!-- opens body calls ng-app,calls ng-contoller -->
 
     <ion-pane><!--Opens ionic pane  -->
       <ion-header-bar class="bar-stable"><!-- declares header bar and style  -->
@@ -35,45 +40,45 @@
   <h1 class="title">Enter Calories<br> Manually</h1><!--sets header with title -->
  <div class="list "><!--opens divider -->
 
-         <button class="button  button-positive" ng-click="count = count + 1"><!-- creates button with class type and sets button click -->
+         <button class="button  button-positive" ng-click="count = count + 1;count2=-1"><!-- creates button with class type and sets button click. Sets undo value -->
         Count  +1<!-- Sets what is displayed on the button -->
           </button><!--closes button parameters -->
        <!--Same for all the buttons below  -->
 
-          <button class="button button-positive" ng-click="count =count +5 ">
+          <button class="button button-positive" ng-click="count =count +5 ;count2=-5">
             5+
           </button>
-        <button class="button button-positive" ng-click="count =count + 10 ">
+        <button class="button button-positive" ng-click="count =count + 10 ;count2=-10">
            +10
           </button>
 
 	<div class="list ">
 
-	 <button class="button  button-positive" ng-click="count =count + 50 ">
+	 <button class="button  button-positive" ng-click="count =count + 50 ;count2=-50">
            +50
           </button>
-	<button class="button  button-positive" ng-click="count =count + 100 ">
+	<button class="button  button-positive" ng-click="count =count + 100;count2=-100 ">
          +100 
           </button>
 	</div>
 	<div class="list ">
 
-	 <button class="button  button-positive" ng-click="count = count - 1">
+	 <button class="button  button-positive" ng-click="count = count - 1;count2=+1">
           Count -1
           </button>
 
-	 <button class="button button-positive" ng-click="count =count -5 ">
+	 <button class="button button-positive" ng-click="count =count -5;count2=+5 ">
             -5
           </button>
-        <button class="button button-positive" ng-click="count =count - 10 ">
+        <button class="button button-positive" ng-click="count =count - 10 ;count2=+10">
           -10
           </button>
 
 	 <div class="list">
-         <button class="button  button-positive" ng-click="count =count - 50 ">
+         <button class="button  button-positive" ng-click="count =count - 50 ;count2=+50">
            -50
           </button>
-        <button class="button  button-positive" ng-click="count =count - 100 ">
+        <button class="button  button-positive" ng-click="count =count - 100 ;count2=+100">
          -100
           </button>
 	</div>
@@ -85,19 +90,19 @@
     <li class="item">
   <h1 class="title">Meats</h1>
 <div class="list ">
-<button class="button button-bock button-assertive" ng-click="count =count +250 ">
+<button class="button button-bock button-assertive" ng-click="count =count +250 ;count2=-250">
             Beef Meat 100g
           </button>
 
-	<button class="button button-bock button-assertive" ng-click="count =count +145 ">
+	<button class="button button-bock button-assertive" ng-click="count =count +145 ;count2=-145">
           Pork 100g
           </button>
 	</div>
 	 <div class="list ">
-	<button class="button button-bock button-assertive" ng-click="count =count +206 ">
+	<button class="button button-bock button-assertive" ng-click="count =count +206 ;count2=-206">
           Rabbit 100g
           </button>
-	<button class="button button-bock button-assertive" ng-click="count =count +294 ">
+	<button class="button button-bock button-assertive" ng-click="count =count +294 ;count2=-294">
          Lamb 100g
           </button>
 	</div>
@@ -109,20 +114,20 @@
     <li class="item">
   <h1 class="title"  >Poultry</h1>
 <div class="list ">
-<button class="button button-bock button-royal" ng-click="count =count +219 ">
+<button class="button button-bock button-royal" ng-click="count =count +219 ;count2=-219">
             Chicken 100g
           </button>
 
-        <button class="button button-bock button-royal" ng-click="count =count +337 ">
+        <button class="button button-bock button-royal" ng-click="count =count +337 ;count2=-337">
           Duck 100g
           </button>
 	</div>
 	<div class="list ">
 
-        <button class="button button-bock button-royal" ng-click="count =count +186 ">
+        <button class="button button-bock button-royal" ng-click="count =count +186 ;count2=-186">
           Turkey 100g
           </button>
-        <button class="button button-bock button-royal" ng-click="count =count +161 ">
+        <button class="button button-bock button-royal" ng-click="count =count +161 ;count2=-161">
          Goose 100g
           </button>
 	</div>
@@ -131,33 +136,33 @@
      
 <li class="item">
   <h1 class="title">Veg</h1>
-<button class="button button-bock button-balanced" ng-click="count =count +41 ">
+<button class="button button-bock button-balanced" ng-click="count =count +41 ;count2=-41">
            Carrots 100g
           </button>
 
-        <button class="button button-bock button-balanced" ng-click="count =count +34 ">
+        <button class="button button-bock button-balanced" ng-click="count =count +34 ;count2=-34">
           Brocolly 100g
           </button>
 	 <div class="list ">
-        <button class="button button-bock button-balanced" ng-click="count =count +18 ">
+        <button class="button button-bock button-balanced" ng-click="count =count +18 ;count2=-18">
           Tomatoes 100g
           </button>
-        <button class="button button-bock button-balanced" ng-click="count =count +28 ">
+        <button class="button button-bock button-balanced" ng-click="count =count +28 ;count2=-28">
          Cauliflower 100g
           </button>
 	    <div class="list ">
 
-	<button class="button button-bock button-balanced" ng-click="count =count +25 ">
+	<button class="button button-bock button-balanced" ng-click="count =count +25 ;count2=-25">
           Cabbage 100g
           </button>
-        <button class="button button-bock button-balanced" ng-click="count =count +17 ">
+        <button class="button button-bock button-balanced" ng-click="count =count +17 ;count2=-17">
           Courgette 100g
           </button>
 	  <div class="list ">
-        <button class="button button-bock button-balanced" ng-click="count =count +61 ">
+        <button class="button button-bock button-balanced" ng-click="count =count +61 ;count2=-61">
          Leek 100g
           </button>
-	 <button class="button button-bock button-balanced" ng-click="count =count +20 ">
+	 <button class="button button-bock button-balanced" ng-click="count =count +20 ;count2=-20">
         Peppers 100g
           </button>
 
@@ -170,17 +175,17 @@
     <li class="item">
   <h1 class="title">Sides</h1>
 
-          <button class="button button-light" ng-click="count =count +77 ">
+          <button class="button button-light" ng-click="count =count +77 ;count2=-77">
             Potatoes 100g
           </button>
-        <button class="button  button-light" ng-click="count =count +289 ">
+        <button class="button  button-light" ng-click="count =count +289 ;count2=-289">
             Bread 100g
           </button>
 	  <div class="list ">
-         <button class="button button-light" ng-click="count =count + 111">
+         <button class="button button-light" ng-click="count =count + 111;count2=-111">
             Rice 100g
           </button>
-        <button class="button  button-light" ng-click="count =count + 371 " >
+        <button class="button  button-light" ng-click="count =count + 371 ;count2=-371;" >
            Pasta 100g
           </button>
   </li>
@@ -191,14 +196,14 @@
           </label>
         
 
-	<button class="button button-block button-energized" ng-click="count = count - count2" >
+	<button class="button button-block button-energized" ng-click="count = count+  count2" ><!-- Undo last move. Value is assigned when button click -->
            Undo
           </button>
 
   <button class="button button-block button-assertive" ng-click="count =0 "><!--Resets count in labels -->
             Reset
-          </button>
-	 </div>
+	    </button>
+	    </div>
       </ion-content>
     </ion-pane>
 
